@@ -1,4 +1,4 @@
-const immoList = [
+ const immoList = [
 	{
 		"id": "c67ab8a7",
 		"title": "Appartement cosy",
@@ -617,3 +617,5 @@ const immoList = [
 		]
 	}
 ]
+
+export default immoList

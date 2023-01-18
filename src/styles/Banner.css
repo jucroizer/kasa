@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2em 7em;
+}
+
+.kasa-logo-header{
+    width: 9%;
+}
+
+.kasa-navbar{
+    margin-top: 0.5em;
+    margin-right: -2em;
+}
+
+.navLink{
+    margin-right: 3em;
+    font-size: 1em;
+    text-decoration: none;
+    color: #FF6060;
+    cursor: pointer;
+}
+
+.navLink:hover{
+    text-decoration: underline;
+}

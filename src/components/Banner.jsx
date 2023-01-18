@@ -1,15 +1,15 @@
-import '../styles.css/Banner.css'
+import '../styles/Banner.css'
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.svg'
 
 function Banner() {
-	return <div>
-            <img src={logo} alt='logo-kasa' className='kasa-logo' />
-            <nav>
-                <Link to="/">Accueil</Link>
-                <Link to="/propos">A propos</Link>
+	return <header className='header'>
+            <img src={logo} alt='logo-kasa' className='kasa-logo-header' />
+            <nav className='kasa-navbar'>
+                <Link className="navLink" to="/">Accueil</Link>
+                <Link className="navLink" to="/propos">A propos</Link>
             </nav>
-        </div>
+        </header>
 }
 
 export default Banner

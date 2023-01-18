@@ -1,0 +1,29 @@
+.kasa-banner{
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: -4em;
+}
+
+.kasa-banner-img{
+    border-radius: 25px;
+    width: 85%;
+    height: 11em;
+    filter: brightness(70%);
+}
+
+h1{
+    position: relative;
+    top: -3.5em;
+    color: white;
+    font-size: 2.5em;
+}
+
+.kasa-annonce{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #F6F6F6;
+    border-radius: 25px;
+    width: 85%;
+    margin: auto;
+    padding: 1em 0em 2em 1em;
+}
