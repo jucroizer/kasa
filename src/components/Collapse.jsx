@@ -1,27 +1,22 @@
 import { useState } from "react";
-import '../styles/Collapse.css'
+import '../styles/Collapse.css';
+import arrowDown from '../assets/arrow-down.svg';
 
-function Collapse({children}) {
-  const [isOpen, setIsOpen] = useState(true);
+function Collapse(props) {
+  const [isOpen, setIsOpen] = useState(false);
 
-  return isOpen ? (
-        <div>
-            <div className="kasa-apropos">
-                <button className="kasa-toggle-button" onClick={() => setIsOpen(false)}> {children} </button>
-            </div>
-            <div>
-                <p className="kasa-apropos-paragraphe">{children}</p>
-            </div>
+  return <div className="item">
+        <div className="item-container">
+        <div className="title">
+            <h3>{props.title}</h3>
+            <button className="btn-arrow" onClick={() => { setIsOpen(!isOpen)}}>
+                <img className={isOpen ? 'arrow active' : 'arrow'} src={arrowDown} alt="ouvrir le contenu"></img>
+            </button>
         </div>
-  ) : (
-        <div className="kasa-apropos-closed">
-            <button className="kasa-toggle-button" onClick={() => setIsOpen(true)}> {children} </button>
+        <div className={isOpen ? 'content show' : 'content'}><p className="content-para">{props.content}</p></div>
         </div>
-  );
+    </div>
 }
 
+
 export default Collapse;
-
-
-// className="kasa-toggle-button"
-// className="kasa-apropos-paragraphe"

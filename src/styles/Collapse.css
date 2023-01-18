@@ -1,6 +1,6 @@
 .kasa-apropos{
-    margin-top: 5em;
-    width: 50%;
+    margin: 5em auto 3em auto;
+    width: 70%;
 }
 
 .item{
@@ -12,19 +12,48 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    cursor: pointer;
     background-color: #FF6060;
+    border-radius: 5px;
+    height: 3em;
+    font-size: 1em;
+    padding-left: 1em;
+}
+
+
+
+.btn-arrow{
+    width: 100%;
+    text-align: end;
+    border: none;
+    background: none;
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+.arrow, .arrow.active{
+    cursor: pointer;
+}
+
+.arrow.active{
+     transform: rotate(180deg);
 }
 
 .content {
     color: black;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.5s cubic-bezier(0,1,0,1);
+    transition: all cubic-bezier(0,1,0,1);
 }
 
 .content.show{
     height: auto;
     max-height: 9999px;
-    transition: all 0.5s cubic-bezier(1,0,1,0);
+    transition: all cubic-bezier(1,0,1,0);
+    background-color: #F7F7F7;
+    border-radius: 0px 0px 5px 5px;
+    color: #FF6060;
+}
+
+.content-para{
+    margin: 2em 1em 0.5em 1em;
 }
