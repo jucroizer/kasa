@@ -1,6 +1,7 @@
 .kasa-apropos{
     margin: 5em auto 3em auto;
     width: 70%;
+    height: fit-content;
 }
 
 .item{
