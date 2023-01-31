@@ -1,0 +1,47 @@
+.kasa-logement-carousel{
+    width: 85%;
+    height: 415px;
+    margin: 0 auto;
+}
+
+.kasa-carousel-container{
+    height: 100%;
+    position: relative;
+    top: -8%;
+}
+
+.kasa-carousel-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-position: center;
+    background-size: cover;
+    margin-top: -6em;
+}
+
+.kasa-carousel-arrows{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 50%;
+    z-index: 1;
+    /* left: 0.5em; */
+    margin-left: 2em;
+    margin-right: -2em;
+}
+
+.carousel-prev, .carousel-next{
+    height: 8em;
+    width: 8em;
+    z-index: 2;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.carousel-prev{
+    background-image: url("../assets/chevron-left.svg");
+}
+.carousel-next{
+    background-image: url("../assets/chevron-right.svg");
+}
