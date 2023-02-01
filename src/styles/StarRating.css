@@ -1,0 +1,22 @@
+.kasa-logement-rate{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.star, .no-star{
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    margin: 0.5em 0.1em;
+    padding: 1em;
+}
+
+.no-star{
+    content: '';
+    background-image: url("../assets/grey-star.svg");
+}
+
+.star{
+    content: '';
+    background-image: url("../assets/corail-star.svg");
+}

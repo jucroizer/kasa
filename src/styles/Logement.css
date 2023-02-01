@@ -1,0 +1,59 @@
+.kasa-logement-infos, .kasa-logement-collapse{
+    margin: 0 5em;
+}
+
+/* Section Informations */
+.kasa-logement-infos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.kasa-logement-h2, .kasa-logement-location, .kasa-host-name{
+    color: #FF6060;
+}
+
+.kasa-logement-title{
+    width: 80%;
+}
+
+.kasa-logement-h2{
+    font-weight: 500;
+    font-size: 2em;
+}
+
+.kasa-logement-location{
+    margin-top: -1em;
+}
+
+.kasa-logement-rating{
+    width: 20%;
+    margin-top: 1em;
+}
+
+.kasa-logement-host{
+    display: flex;
+    justify-content: baseline;
+}
+
+.kasa-host-name{
+    text-align: right;
+    margin-right: 0.5em;
+}
+
+.kasa-host-img{
+    width: 3em;
+    height: 3em;
+    border-radius: 100px;
+    margin-top: 0.5em;
+}
+
+/* Section Collapse */
+.kasa-logement-collapse{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.kasa-collapse{
+    width: 50%;
+    margin: 0 1em 0 0;
+}

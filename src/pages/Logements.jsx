@@ -6,6 +6,7 @@ import { useParams } from "react-router";
 import immoList from "../data/data";
 import { useState, useEffect } from "react";
 import "../styles/Logement.css";
+import StarRating from "../components/StarRating";
 
 function Logement() {
   const { id } = useParams();
@@ -23,7 +24,9 @@ function Logement() {
 
   // console.log(logement)
 
-  // console.log(logement.host.name)
+  // console.log(logement.tags.map((e) => {
+  //   <div className="kasa-logement-tags">{tags}</div>
+  // }))
   
 
   return (
@@ -40,25 +43,32 @@ function Logement() {
 
         <div className="kasa-logement-infos">
           <div className="kasa-logement-title">
-          <h2>{logement.title}</h2>
-          <p>{logement.location}</p>
+          <h2 className="kasa-logement-h2">{logement.title}</h2>
+          <p className="kasa-logement-location">{logement.location}</p>
+          
           <div className="kasa-logement-tags">{logement.tags}</div>
           </div>
           <div className="kasa-logement-rating">
             <div className="kasa-logement-host">
-              <p>{logement.host.name}</p>
-              <img src={logement.host.picture} alt="proprietaire"></img>
+              <p className="kasa-host-name">{logement.host.name}</p>
+              <img className="kasa-host-img" src={logement.host.picture} alt="proprietaire"></img>
             </div>
-            <div className="kasa-logement-rate">
-              <div>{logement.rating}</div>
-            </div>
+            
+                <StarRating rating={logement.rating}/>
+            
           </div>
         </div>
 
         <div className="kasa-logement-collapse">
-          <Collapse title="Description" content={logement.description}/>
-          <Collapse title="Equipement" content={logement.equipments}/>
+          <div className="kasa-collapse">
+            <Collapse title="Description" content={logement.description}/>
+          </div>
+          <div className="kasa-collapse">
+            <Collapse title="Equipement" content={logement.equipments}/>
+          </div>
+          
         </div>
+
       </div>
 
       <Footer />
