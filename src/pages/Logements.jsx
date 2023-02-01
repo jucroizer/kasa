@@ -7,10 +7,20 @@ import immoList from "../data/data";
 import { useState, useEffect } from "react";
 import "../styles/Logement.css";
 import StarRating from "../components/StarRating";
+import { useNavigate } from 'react-router-dom';
 
 function Logement() {
   const { id } = useParams();
   const [logement, setLogement] = useState();
+
+  console.log(id)
+
+  const navigate = useNavigate();
+  // useEffect(() => {
+  //     if(id === null){
+  //       navigate('*');
+  //     }
+  //   })
 
   useEffect(() => {
     immoList.map((elem) => {
@@ -18,16 +28,15 @@ function Logement() {
         console.log("je suis dans le if", elem);
         setLogement(elem);
         console.log(setLogement)
+      }else{
+        console.log(id)
+        navigate('*');
       }
     });
   });
 
-  // console.log(logement)
-
-  // console.log(logement.tags.map((e) => {
-  //   <div className="kasa-logement-tags">{tags}</div>
-  // }))
   
+
 
   return (
     <div>

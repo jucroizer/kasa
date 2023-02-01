@@ -12,7 +12,7 @@ function RouteManager() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/logement/:id" element={<Logement />}></Route>
         <Route path="/propos" element={<Propos />}></Route>
-        <Route path="/error" element={<Error />}></Route>
+        <Route path="*" element={<Error />}></Route>
       </Routes>
     </Router>
   );
