@@ -7,71 +7,66 @@ import immoList from "../data/data";
 import { useState, useEffect } from "react";
 import "../styles/Logement.css";
 import StarRating from "../components/StarRating";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import Tags from "../components/Tags";
 
 function Logement() {
   const { id } = useParams();
-  // const [logement, setLogement] = useState();
-  const logement = immoList.find((logement) => 
-    logement.id === id
-  );
-
-  console.log('je suis id', id)
-  console.log(logement)
-
+  const logement = immoList.find((logement) => logement.id === id);
 
   const navigate = useNavigate();
 
-
   useEffect(() => {
-    if (logement === undefined){
-        navigate('/error');
-      }
+    if (logement === undefined) {
+      navigate("/error");
+    }
   });
 
-
-  if(logement === undefined){
+  if (logement === undefined) {
     return null;
   }
-
 
   return (
     <div>
       <Banner />
 
       <div>
-
         <div className="kasa-logement-carousel">
           <Carousel content={logement.pictures} />
         </div>
 
         <div className="kasa-logement-infos">
+
           <div className="kasa-logement-title">
-          <h2 className="kasa-logement-h2">{logement.title}</h2>
-          <p className="kasa-logement-location">{logement.location}</p>
-          
-          <div className="kasa-logement-tags">{logement.tags}</div>
+            <h2 className="kasa-logement-h2">{logement.title}</h2>
+            <p className="kasa-logement-location">{logement.location}</p>
+            
+              <Tags tags={logement.tags} />
+            
           </div>
+
           <div className="kasa-logement-rating">
             <div className="kasa-logement-host">
               <p className="kasa-host-name">{logement.host.name}</p>
-              <img className="kasa-host-img" src={logement.host.picture} alt="proprietaire"></img>
+              <img
+                className="kasa-host-img"
+                src={logement.host.picture}
+                alt="proprietaire"
+              ></img>
             </div>
-            
-                <StarRating rating={logement.rating}/>
-            
+
+            <StarRating rating={logement.rating} />
           </div>
         </div>
 
         <div className="kasa-logement-collapse">
           <div className="kasa-collapse">
-            <Collapse title="Description" description={logement.description}/>
+            <Collapse title="Description" description={logement.description} />
           </div>
           <div className="kasa-collapse">
-            <Collapse title="Equipement" equipements={logement.equipments}/>
+            <Collapse title="Equipement" equipements={logement.equipments} />
           </div>
         </div>
-
       </div>
 
       <Footer />

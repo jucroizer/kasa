@@ -1,7 +1,6 @@
 import "../styles/StarRating.css";
 
 function StarRating({ rating }) {
-  console.log(rating);
 
   if (rating === 1) {
     return (
