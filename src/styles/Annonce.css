@@ -28,7 +28,7 @@
 .logement-item-cover{
     max-width: 340px;
     height: 340px;
-    object-fit: cover;
+    object-fit: fill;
     border-radius: 10px;
 }
 
