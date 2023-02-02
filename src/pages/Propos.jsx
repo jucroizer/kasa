@@ -21,25 +21,25 @@ function Propos() {
       <div className="kasa-apropos">
         <Collapse
           title={"Fiabilité"}
-          content={
+          description={
             "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."
           }
         />
         <Collapse
           title={"Respect"}
-          content={
+          description={
             "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."
           }
         />
         <Collapse
           title={"Service"}
-          content={
+          description={
             "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."
           }
         />
         <Collapse
           title={"Sécurité"}
-          content={
+          description={
             "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."
           }
         />

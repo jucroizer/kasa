@@ -11,31 +11,28 @@ import { useNavigate } from 'react-router-dom';
 
 function Logement() {
   const { id } = useParams();
-  const [logement, setLogement] = useState();
+  // const [logement, setLogement] = useState();
+  const logement = immoList.find((logement) => 
+    logement.id === id
+  );
 
-  console.log(id)
+  console.log('je suis id', id)
+  console.log(logement)
+
 
   const navigate = useNavigate();
-  // useEffect(() => {
-  //     if(id === null){
-  //       navigate('*');
-  //     }
-  //   })
+
 
   useEffect(() => {
-    immoList.map((elem) => {
-      if (elem.id === id) {
-        console.log("je suis dans le if", elem);
-        setLogement(elem);
-        console.log(setLogement)
-      }else{
-        console.log(id)
-        navigate('*');
+    if (logement === undefined){
+        navigate('/error');
       }
-    });
   });
 
-  
+
+  if(logement === undefined){
+    return null;
+  }
 
 
   return (
@@ -47,8 +44,6 @@ function Logement() {
         <div className="kasa-logement-carousel">
           <Carousel content={logement.pictures} />
         </div>
-        
-        
 
         <div className="kasa-logement-infos">
           <div className="kasa-logement-title">
@@ -70,12 +65,11 @@ function Logement() {
 
         <div className="kasa-logement-collapse">
           <div className="kasa-collapse">
-            <Collapse title="Description" content={logement.description}/>
+            <Collapse title="Description" description={logement.description}/>
           </div>
           <div className="kasa-collapse">
-            <Collapse title="Equipement" content={logement.equipments}/>
+            <Collapse title="Equipement" equipements={logement.equipments}/>
           </div>
-          
         </div>
 
       </div>

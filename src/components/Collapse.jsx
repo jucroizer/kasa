@@ -13,7 +13,14 @@ function Collapse(props) {
                 <img className={isOpen ? 'arrow active' : 'arrow'} src={arrowDown} alt="ouvrir le contenu"></img>
             </button>
         </div>
-        <div className={isOpen ? 'content show' : 'content'}><p className="content-para">{props.content}</p></div>
+        <div className={isOpen ? 'content show' : 'content'} style={isOpen ? {display:"block"} : {display: "none"}}>
+                {props.equipements ? <ul>{
+                    props.equipements.map((element, index)=>{
+                        return <li key ={`${index}-${props.index}`}>{element}</li>
+                    })
+                }</ul>
+                : <p>{props.description}</p>}
+        </div>
         </div>
     </div>
 }

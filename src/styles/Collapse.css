@@ -20,8 +20,6 @@
     padding-left: 1em;
 }
 
-
-
 .btn-arrow{
     width: 100%;
     text-align: end;
@@ -57,4 +55,5 @@
 
 .content-para{
     margin: 2em 1em 0.5em 1em;
+    /* display: block; */
 }
