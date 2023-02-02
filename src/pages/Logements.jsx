@@ -36,13 +36,11 @@ function Logement() {
         </div>
 
         <div className="kasa-logement-infos">
-
           <div className="kasa-logement-title">
             <h2 className="kasa-logement-h2">{logement.title}</h2>
             <p className="kasa-logement-location">{logement.location}</p>
-            
-              <Tags tags={logement.tags} />
-            
+
+            <Tags tags={logement.tags} />
           </div>
 
           <div className="kasa-logement-rating">

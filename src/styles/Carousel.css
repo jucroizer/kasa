@@ -45,3 +45,10 @@
 .carousel-next{
     background-image: url("../assets/chevron-right.svg");
 }
+
+.kasa-carousel-roller{
+    text-align: center;
+    position: relative;
+    top: 90%;
+    color: white;
+}

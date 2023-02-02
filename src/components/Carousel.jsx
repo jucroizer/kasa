@@ -29,7 +29,7 @@ function Carousel(props) {
         <div className="carousel-next" onClick={goToNext}></div>
       </div>
       <div alt="appartement" className="kasa-carousel-image" style={slideStyles}>
-        <p>{currentIndex + 1}/{roller}</p>
+        <p className="kasa-carousel-roller">{currentIndex + 1}/{roller}</p>
       </div>
     </div>
   );

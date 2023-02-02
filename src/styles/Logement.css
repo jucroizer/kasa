@@ -1,5 +1,5 @@
 .kasa-logement-infos, .kasa-logement-collapse{
-    margin: 0 5em;
+    margin: 0 7em;
 }
 
 /* Section Informations */
@@ -32,7 +32,7 @@
 
 .kasa-logement-host{
     display: flex;
-    justify-content: baseline;
+    justify-content: flex-end;
 }
 
 .kasa-host-name{

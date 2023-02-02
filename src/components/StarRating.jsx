@@ -2,7 +2,10 @@ import "../styles/StarRating.css";
 
 function StarRating({ rating }) {
 
-  if (rating === 1) {
+  const rate = rating;
+
+  if (rate === "1") {
+    console.log(rating)
     return (
       <div className="kasa-logement-rate">
         <img
@@ -33,7 +36,7 @@ function StarRating({ rating }) {
       </div>
     );
   }
-  if (rating === 2) {
+  if (rate === "2") {
     return (
       <div className="kasa-logement-rate">
         <img
@@ -64,7 +67,7 @@ function StarRating({ rating }) {
       </div>
     );
   }
-  if (rating === 3) {
+  if (rate === "3") {
     return (
       <div className="kasa-logement-rate">
         <img
@@ -95,9 +98,8 @@ function StarRating({ rating }) {
       </div>
     );
   }
-  if (rating === 4) {
-    return (
-      <div className="kasa-logement-rate">
+  if (rate === "4") {
+    return <div className="kasa-logement-rate">
         <img
           className="star"
           src="../assets/corail-star.svg"
@@ -122,20 +124,42 @@ function StarRating({ rating }) {
           className="no-star"
           src="../assets/grey-star.svg"
           alt="pas etoile"
+        />
+      </div>
+    
+  }
+  if (rate === "5") {
+    return (
+      <div className="kasa-logement-rate">
+        <img
+          className="star"
+          src="../assets/corail-star.svg"
+          alt="etoile"
+        />
+        <img
+          className="star"
+          src="../assets/corail-star.svg"
+          alt="etoile"
+        />
+        <img
+          className="star"
+          src="../assets/corail-star.svg"
+          alt="etoile"
+        />
+        <img
+          className="star"
+          src="../assets/corail-star.svg"
+          alt="etoile"
+        />
+        <img
+          className="star"
+          src="../assets/corail-star.svg"
+          alt="etoile"
         />
       </div>
     );
   }
 
-  return (
-    <div className="kasa-logement-rate">
-      <img className="star" src="../assets/corail-star.svg" alt="etoile" />
-      <img className="star" src="../assets/corail-star.svg" alt="etoile" />
-      <img className="star" src="../assets/corail-star.svg" alt="etoile" />
-      <img className="star" src="../assets/corail-star.svg" alt="etoile" />
-      <img className="star" src="../assets/corail-star.svg" alt="etoile" />
-    </div>
-  );
 }
 
 export default StarRating;
