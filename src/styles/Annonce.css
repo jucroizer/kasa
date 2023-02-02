@@ -1,11 +1,29 @@
-.logement-item{
-    list-style: none;
+/* .logement-item{
     width: 340px;
     height: 340px;
     margin: 2em;
     cursor: pointer;
+} */
+
+.kasa-annonce-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    margin: 0 7em;
+    background-color: #F6F6F6;
+    padding: 2em;
+    border-radius: 25px;
 }
 
+.kasa-logement-link{
+    max-width: 340px;
+    height: 340px;
+    margin-left: 1em;
+    margin-bottom: 2em;
+    text-decoration: none;
+    color: white;
+}
 
 .logement-item-cover{
     max-width: 340px;
@@ -17,15 +35,14 @@
 .logement-item-title{
     position: relative;
     color: white;
-    top: -25em;
+    top: -4em;
     width: 65%;
-    margin: auto 1em;
+    left: 1em;
 }
 
 
 .cover-gradient {
     position: relative;
-    top: -21.5em;
     width: 340px;
     height: 340px;
     border-radius: 10px;
