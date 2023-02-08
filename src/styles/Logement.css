@@ -25,6 +25,23 @@
     margin-top: -1em;
 }
 
+/* Section Tags */
+
+.kasa-logement-tags{
+    display: flex;
+}
+
+.kasa-logement-tag{
+    margin: 0 1em 0 0;
+    font-size: 0.7em;
+    background-color: #FF6060;
+    padding: 0.5em;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Section Host */
+
 .kasa-logement-rating{
     width: 20%;
     margin-top: 1em;
@@ -56,4 +73,82 @@
 .kasa-collapse{
     width: 50%;
     margin: 0 1em 0 0;
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .kasa-logement-infos, .kasa-logement-collapse{
+        margin: 0 2em;
+    }
+
+    /* Section Infos */
+
+    .kasa-logement-infos{
+        display: block;
+        margin-top: -8em;
+    }
+
+
+    /* Section Title */
+
+    .kasa-logement-title{
+        width: 100%;
+    }
+
+
+    /* Section Tags */
+
+    .kasa-logement-tags{
+        display: flex;
+    }
+
+    .kasa-logement-tag{
+        margin: 0 1em 0 0;
+        font-size: 0.7em;
+        background-color: #FF6060;
+        padding: 0.5em;
+        color: white;
+        border-radius: 5px;
+    }
+
+
+    /* Section Host */
+    .kasa-logement-rating{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 1em;
+        align-items: center;
+    }
+    
+    .kasa-logement-host{
+        display: flex;
+        justify-content: flex-end;
+        width: 30%;
+    }
+    
+    .kasa-host-name{
+        text-align: right;
+        margin-right: 0.5em;
+    }
+    
+    .kasa-host-img{
+        width: 3em;
+        height: 3em;
+        border-radius: 100px;
+        margin-top: 0.5em;
+    }
+
+
+    /* Section Collapse */
+    .kasa-logement-collapse{
+        display: block;
+        flex-direction: column;
+    }
+
+    .kasa-collapse{
+        width: 100%;
+    }
 }

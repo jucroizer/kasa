@@ -19,7 +19,7 @@ function Collapse(props) {
                         return <li key ={`${index}-${props.index}`}>{element}</li>
                     })
                 }</ul>
-                : <p>{props.description}</p>}
+                : <p className="kasa-apropos-p">{props.description}</p>}
         </div>
         </div>
     </div>

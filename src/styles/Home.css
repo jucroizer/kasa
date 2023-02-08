@@ -27,3 +27,27 @@ h1{
     margin: auto;
     padding: 1em 0em 2em 1em;
 }
+
+@media screen and (max-width: 767px) {
+
+    .kasa-banner{
+        margin-bottom: -5em;
+    }
+
+    .kasa-banner-img{
+        object-fit: cover;
+        border-radius: 15px;
+        width: 85%;
+        height: 8em;
+        filter: brightness(70%);
+    }
+
+    h1{
+        width: 51%;
+        text-align: left;
+        top: -4.5em;
+        left: 2em;
+        font-size: 1.5em;
+    }
+    
+}

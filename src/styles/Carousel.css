@@ -25,7 +25,6 @@
     position: relative;
     top: 50%;
     z-index: 1;
-    /* left: 0.5em; */
     margin-left: 2em;
     margin-right: -2em;
 }
@@ -51,4 +50,29 @@
     position: relative;
     top: 90%;
     color: white;
+}
+
+@media screen and (max-width: 767px) {
+
+    .kasa-carousel-image{
+        height: 65%;
+    }
+
+    .carousel-prev{
+        background-image: url("../assets/chevron-left-mini.svg");
+    }
+    .carousel-next{
+        background-image: url("../assets/chevron-right-mini.svg");
+        margin-left: 79%;
+    }
+
+    .kasa-carousel-arrows{
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        top: 42%;
+        z-index: 1;
+        margin: 0 0 0 1em;
+    }
+    
 }

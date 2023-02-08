@@ -25,3 +25,19 @@
 .navLink:hover{
     text-decoration: underline;
 }
+
+@media screen and (max-width: 767px) {
+    .header {
+        margin: 2em 2em;
+    }
+
+    .kasa-logo-header{
+        width: 30%;
+    }
+
+    .navLink{
+        text-transform: uppercase;
+        font-size: 0.8em;
+        margin-right: 2em;
+    }
+}

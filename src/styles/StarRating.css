@@ -20,3 +20,27 @@
     content: '';
     background-image: url("../assets/corail-star.svg");
 }
+
+@media screen and (max-width: 767px) {
+    .kasa-logement-rate{
+        display: flex;
+        justify-content: flex-start;
+        width: 30%;
+    }
+
+    .star, .no-star{
+        margin: 0.5em 0.2em;
+        padding: 0.5em;
+    }
+
+    .no-star{
+        content: '';
+        background-image: url("../assets/grey-star-mini.svg");
+    }
+    
+    .star{
+        content: '';
+        background-image: url("../assets/corail-star-mini.svg");
+    }
+
+}
