@@ -3,7 +3,6 @@
 }
 
 .kasa-error-title{
-    margin-top: 4em;
     margin-bottom: 0em;
     color: #FF6060; 
     font-size: 12em;
@@ -11,14 +10,33 @@
 }
 
 .kasa-error-para{
-    position: relative;
-    top: -27em;
     color: #FF6060; 
     font-size: 1.5em;
+    margin-bottom: 10em;
 }
 
 .kasa-error-link{
-    position: relative;
-    top: -35em;
-    margin-bottom: 0;
+    color: #FF6060; 
+}
+
+@media screen and (max-width: 767px) {
+    .error-content{
+        width: 100%;
+    }
+
+    .kasa-error-title{
+        margin-top: 1em;
+        font-size: 7em;
+    }
+
+    .kasa-error-para{
+        color: #FF6060; 
+        font-size: 1em;
+        width: 50%;
+        margin: 0 auto 7em auto;
+    }
+
+    .kasa-error-link{
+        margin: 3em 0;
+    }
 }

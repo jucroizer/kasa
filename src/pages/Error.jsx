@@ -12,7 +12,7 @@ function Error() {
         <p className="kasa-error-para">
           Oups! La page que vous demandez n'existe pas.
         </p>
-        <Link className="navLink kasa-error-link" to="/">
+        <Link className="kasa-error-link" to="/">
           Retourner sur la page d'accueil
         </Link>
       </div>

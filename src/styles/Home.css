@@ -11,7 +11,7 @@
     filter: brightness(70%);
 }
 
-h1{
+.kasa-home-h1{
     position: relative;
     top: -3.5em;
     color: white;
@@ -42,7 +42,7 @@ h1{
         filter: brightness(70%);
     }
 
-    h1{
+    .kasa-home-h1{
         width: 51%;
         text-align: left;
         top: -4.5em;

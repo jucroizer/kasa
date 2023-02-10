@@ -18,7 +18,7 @@ function Home() {
           src={fondAcceuil}
           alt="décoration de la page d accueil"
         ></img>
-        <h1>Chez vous, partout et ailleurs</h1>
+        <h1 className="kasa-home-h1">Chez vous, partout et ailleurs</h1>
       </div>
 
       <TableauPrincipal />
