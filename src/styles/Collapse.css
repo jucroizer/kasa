@@ -58,6 +58,18 @@
     /* display: block; */
 }
 
+.kasa-apropos-p{
+    padding: 0.5em 0.7em 1em 0.7em;
+}
+
+ul{
+    padding: 0 0.7em 1em 0.7em;
+}
+
+.kasa-collapse-li{
+    list-style-type: none;
+}
+
 @media screen and (max-width: 767px) {
     .kasa-apropos{
         margin: 7em auto 3em auto;
@@ -70,6 +82,14 @@
 
     .kasa-apropos-p{
         padding: 0.5em 0.7em 1em 0.7em;
+        font-size: 0.8em;
+    }
+
+    ul{
+        padding: 0 0.7em 1em 0.7em;
+    }
+
+    .kasa-collapse-li{
         font-size: 0.8em;
     }
 }

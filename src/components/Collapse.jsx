@@ -16,7 +16,7 @@ function Collapse(props) {
         <div className={isOpen ? 'content show' : 'content'} style={isOpen ? {display:"block"} : {display: "none"}}>
                 {props.equipements ? <ul>{
                     props.equipements.map((element, index)=>{
-                        return <li key ={`${index}-${props.index}`}>{element}</li>
+                        return <li className="kasa-collapse-li" key ={`${index}-${props.index}`}>{element}</li>
                     })
                 }</ul>
                 : <p className="kasa-apropos-p">{props.description}</p>}
