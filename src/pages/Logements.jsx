@@ -4,7 +4,7 @@ import Carousel from "../components/Carousel";
 import Collapse from "../components/Collapse";
 import { useParams } from "react-router";
 import immoList from "../data/data";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "../styles/Logement.css";
 import StarRating from "../components/StarRating";
 import { useNavigate } from "react-router-dom";

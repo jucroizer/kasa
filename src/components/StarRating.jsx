@@ -1,165 +1,19 @@
 import "../styles/StarRating.css";
+import React from "react";
+import Like from '../assets/corail-star.svg'
+import NoLike from '../assets/grey-star.svg'
 
-function StarRating({ rating }) {
+function StarRating(props){
+    const rating = props.rating;
+    const range = [1,2,3,4,5]
 
-  const rate = rating;
-
-  if (rate === "1") {
-    console.log(rating)
-    return (
-      <div className="kasa-logement-rate">
-        <img
-          className="star"
-          src="../assets/corail-star.svg"
-          alt="etoile"
-        />
-        <img
-          className="no-star"
-          src="../assets/grey-star.svg"
-          alt="pas etoile"
-        />
-        <img
-          className="no-star"
-          src="../assets/grey-star.svg"
-          alt="pas etoile"
-        />
-        <img
-          className="no-star"
-          src="../assets/grey-star.svg"
-          alt="pas etoile"
-        />
-        <img
-          className="no-star"
-          src="../assets/grey-star.svg"
-          alt="pas etoile"
-        />
-      </div>
-    );
-  }
-  if (rate === "2") {
-    return (
-      <div className="kasa-logement-rate">
-        <img
-          className="star"
-          src="../assets/corail-star.svg"
-          alt="etoile"
-        />
-        <img
-          className="star"
-          src="../assets/corail-star.svg"
-          alt="etoile"
-        />
-        <img
-          className="no-star"
-          src="../assets/grey-star.svg"
-          alt="pas etoile"
-        />
-        <img
-          className="no-star"
-          src="../assets/grey-star.svg"
-          alt="pas etoile"
-        />
-        <img
-          className="no-star"
-          src="../assets/grey-star.svg"
-          alt="pas etoile"
-        />
-      </div>
-    );
-  }
-  if (rate === "3") {
-    return (
-      <div className="kasa-logement-rate">
-        <img
-          className="star"
-          src="../assets/corail-star.svg"
-          alt="etoile"
-        />
-        <img
-          className="star"
-          src="../assets/corail-star.svg"
-          alt="etoile"
-        />
-        <img
-          className="star"
-          src="../assets/corail-star.svg"
-          alt="etoile"
-        />
-        <img
-          className="no-star"
-          src="../assets/grey-star.svg"
-          alt="pas etoile"
-        />
-        <img
-          className="no-star"
-          src="../assets/grey-star.svg"
-          alt="pas etoile"
-        />
-      </div>
-    );
-  }
-  if (rate === "4") {
-    return <div className="kasa-logement-rate">
-        <img
-          className="star"
-          src="../assets/corail-star.svg"
-          alt="etoile"
-        />
-        <img
-          className="star"
-          src="../assets/corail-star.svg"
-          alt="etoile"
-        />
-        <img
-          className="star"
-          src="../assets/corail-star.svg"
-          alt="etoile"
-        />
-        <img
-          className="star"
-          src="../assets/corail-star.svg"
-          alt="etoile"
-        />
-        <img
-          className="no-star"
-          src="../assets/grey-star.svg"
-          alt="pas etoile"
-        />
-      </div>
-    
-  }
-  if (rate === "5") {
-    return (
-      <div className="kasa-logement-rate">
-        <img
-          className="star"
-          src="../assets/corail-star.svg"
-          alt="etoile"
-        />
-        <img
-          className="star"
-          src="../assets/corail-star.svg"
-          alt="etoile"
-        />
-        <img
-          className="star"
-          src="../assets/corail-star.svg"
-          alt="etoile"
-        />
-        <img
-          className="star"
-          src="../assets/corail-star.svg"
-          alt="etoile"
-        />
-        <img
-          className="star"
-          src="../assets/corail-star.svg"
-          alt="etoile"
-        />
-      </div>
-    );
-  }
-
+    return(
+        <div className="ratingGlobal">
+            {range.map((rangeElement, index)=>
+                rating >= rangeElement ? <img src={Like} alt="rating star" key={`star--${index}`} className="star"/> : <img src={NoLike} alt="rating star" key={`star--${index}`} className="star"/>
+            )}
+        </div>
+    )
 }
 
 export default StarRating;

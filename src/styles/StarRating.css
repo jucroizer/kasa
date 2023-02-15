@@ -1,46 +1,18 @@
-.kasa-logement-rate{
+.ratingGlobal{
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: flex-end;
-}
-
-.star, .no-star{
-    width: 1em;
-    height: 1em;
-    background-repeat: no-repeat;
-    margin: 0.5em 0.1em;
-    padding: 1em;
-}
-
-.no-star{
-    content: '';
-    background-image: url("../assets/grey-star.svg");
+    gap: 10px;
 }
 
 .star{
-    content: '';
-    background-image: url("../assets/corail-star.svg");
+    width: fit-content;
+    height: 30px;
 }
 
-@media screen and (max-width: 767px) {
-    .kasa-logement-rate{
-        display: flex;
-        justify-content: flex-start;
-        width: 30%;
-    }
-
-    .star, .no-star{
-        margin: 0.5em 0.2em;
-        padding: 0.5em;
-    }
-
-    .no-star{
-        content: '';
-        background-image: url("../assets/grey-star-mini.svg");
-    }
-    
+@media only screen and (max-width : 900px){
     .star{
-        content: '';
-        background-image: url("../assets/corail-star-mini.svg");
+        width: fit-content;
+        height: 20px;
     }
-
 }
