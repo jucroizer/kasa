@@ -3,9 +3,13 @@ import "../styles/Carousel.css";
 
 function Carousel(props) {
 
+  console.log("je suis la props entière : ", props)
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const roller = props.content.length;
+
+  console.log("je suis le roller",roller)
 
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
@@ -22,14 +26,22 @@ function Carousel(props) {
     backgroundImage: `url(${props.content[currentIndex]}`,
   };
 
+  const displayRoller = {
+      display : roller === 1 ? 'none' : 'block'
+  }
+
+  const resize = {
+      top : roller === 1 ? '3em' : '-6em'
+  }
+
   return (
     <div className="kasa-carousel-container">
       <div className="kasa-carousel-arrows">
-        <div className="carousel-prev" onClick={goToPrevious}></div>
-        <div className="carousel-next" onClick={goToNext}></div>
+        <div className="carousel-prev" onClick={goToPrevious} style={displayRoller}></div>
+        <div className="carousel-next" onClick={goToNext} style={displayRoller}></div>
       </div>
-      <div alt="appartement" className="kasa-carousel-image" style={slideStyles}>
-        <p className="kasa-carousel-roller">{currentIndex + 1}/{roller}</p>
+      <div alt="appartement" className="kasa-carousel-image" style={{...slideStyles, ...resize}}>
+        <p className="kasa-carousel-roller" style={displayRoller}>{currentIndex + 1}/{roller}</p>
       </div>
     </div>
   );
