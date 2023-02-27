@@ -3,13 +3,9 @@ import "../styles/Carousel.css";
 
 function Carousel(props) {
 
-  console.log("je suis la props entière : ", props)
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const roller = props.content.length;
-
-  console.log("je suis le roller",roller)
 
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
